@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ block.super }} Update
+{% endblock %}
+
+{% block content %}
+    <a href="{% url 'department_list_url' %}">Department List</a>
+    <table>
+        <tr>
+            <td>{{department.name}}</td>
+            <td>{{department.floor}}</td>
+        </tr>
+    </table>
+
+{% endblock %}
+

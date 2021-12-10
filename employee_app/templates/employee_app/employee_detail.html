@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ block.super }} Update
+{% endblock %}
+
+{% block content %}
+<a href="{% url 'employee_list_url' %}">Employee List</a>
+<table>
+    <tr>
+        <td>{{employee.first_name}}</td>
+        <td>{{employee.last_name}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.department}}</td>
+        <td>{{employee.programming_language}}</td>
+    </tr>
+</table>
+
+{% endblock %}
+

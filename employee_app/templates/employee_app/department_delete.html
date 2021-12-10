@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ block.super }} Delete
+{% endblock %}
+
+{% block content %}
+
+<form action="{{ department.get_delete_url }}" method="POST">
+    {% csrf_token %}
+    <h3>Are you sure you want to delete <b>"{{ department.name|title }}"</b></h3>
+    <a href="{{department.get_absolute_url}}">Cancel</a>
+    <button type="submit" name='button' class="btn btn-danger">Submit</button>
+
+</form>
+
+{% endblock %}
+

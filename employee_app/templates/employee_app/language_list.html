@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ block.super }} Add
+{% endblock %}
+
+{% block content %}
+<h2>
+    <a href="{% url 'language_create_url'%}">Add Language</a>
+</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th></th>
+    </tr>
+    {% for language in languages %}
+    <tr>
+        <td>{{ language.name }}</td>
+        <td><a href="{{language.get_update_url}}">edit</a>
+            <a href="{{language.get_delete_url}}">delete</a></td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+{% endblock %}
+

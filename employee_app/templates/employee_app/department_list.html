@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ block.super }} Delete
+{% endblock %}
+
+{% block content %}
+<h2>
+    <a href="{% url 'department_create_url'%}">Add Department</a>
+</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Floor</th>
+        <th></th>
+    </tr>
+    {% for department in departments %}
+    <tr>
+        <td>{{ department.name }}</td>
+        <td>{{ department.floor }}</td>
+        <td><a href="{{department.get_update_url}}">edit</a>
+            <a href="{{department.get_delete_url}}">delete</a></td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+{% endblock %}
+

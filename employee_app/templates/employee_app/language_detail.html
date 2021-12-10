@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ block.super }} Update
+{% endblock %}
+
+{% block content %}
+    <a href="{% url 'language_list_url' %}">Language List</a>
+    <table>
+        <tr>
+            <td>{{language.name}}</td>
+        </tr>
+    </table>
+
+{% endblock %}
+
